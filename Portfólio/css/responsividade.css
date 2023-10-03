@@ -1,0 +1,39 @@
+@media (max-width: 920px) {
+  main {
+    margin-top: 4rem;
+  }
+  main #banner {
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  main #banner .banner-content {
+    text-align: center;
+  }
+
+  main #banner .banner-content .banner-content-title {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+}
+
+@media (max-width: 740px) {
+  #posts .posts-content .posts-cards {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 600px) {
+  header #navbar .nav-menu {
+    display: block;
+  }
+
+  header #navbar .nav-list {
+    display: none;
+  }
+
+  header #navbar .nav-brand{
+    display: none;
+  }
+}
