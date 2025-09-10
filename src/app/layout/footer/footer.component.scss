@@ -1,0 +1,18 @@
+div {
+  height: 3rem;
+  padding: 1rem 2rem;
+  background-color: #000;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  p {
+    margin: 0;
+    text-align: center;
+  }
+}
+
+:host-context(.dark-theme) div {
+  background-color: var(--dark-background);
+}

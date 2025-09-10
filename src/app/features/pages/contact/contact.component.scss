@@ -1,0 +1,92 @@
+:host {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 4rem;
+}
+
+.contact-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  width: 50%;
+}
+
+h2 {
+  font-size: 2rem;
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  text-align: center;
+}
+
+h3 {
+  font-size: 1.5rem;
+  color: var(--text);
+  text-align: center;
+  margin: 0 0 1rem 0;
+}
+
+::ng-deep .ant-form-item-label label {
+  color: var(--text);
+}
+
+a {
+  font-size: 1rem;
+  text-align: center;
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+nz-icon {
+  font-size: 2rem;
+}
+
+form {
+  width: 100%;
+
+  h2 {
+    margin-bottom: 2rem;
+    display: block;
+    width: calc(14 / 24 * 100%);
+    margin-left: calc(6 / 24 * 100%);
+  }
+
+  nz-form-control {
+    text-align: center;
+  }
+}
+
+.message {
+  text-align: center;
+  font-size: 1.2rem;
+
+  &.success {
+    color: green;
+  }
+
+  &.error {
+    color: red;
+  }
+}
+
+:host-context(.dark-theme) {
+  h3,
+  ::ng-deep .ant-form-item-label label {
+    color: var(--dark-text);
+  }
+}
+
+@media (max-width: 768px) {
+  :host {
+    flex-direction: column;
+    align-items: center;
+  }
+}

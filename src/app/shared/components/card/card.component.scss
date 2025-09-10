@@ -1,0 +1,33 @@
+:host {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  z-index: 1;
+  background-clip: padding-box;
+  color: var(--text);
+  background-color: var(--light-background);
+}
+
+:host::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 2px;
+  border-radius: 8px;
+  background: linear-gradient(to right, #6a5acd, #00bfff) border-box;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  z-index: 0;
+}
+
+:host-context(.dark-theme) {
+  color: var(--dark-text);
+  background: var(--dark-background);
+}

@@ -1,0 +1,38 @@
+<div class="info-area">
+  <h2>{{ "HOME_PAGE.GREETING_NAME" | translate }}</h2>
+  <h3>{{ "HOME_PAGE.GREETING_ROLE" | translate }}</h3>
+  <p>
+    {{ "HOME_PAGE.DESCRIPTION" | translate }}
+  </p>
+  <app-button
+    [attr.data-lang]="translateService.getCurrentLang()"
+    (click)="downloadCV()"
+  >
+    {{ "HOME_PAGE.DOWNLOAD_CV" | translate }}
+    <nz-icon nzType="download" nzTheme="outline"></nz-icon>
+  </app-button>
+</div>
+
+<div class="image-area">
+  <img
+    ngSrc="profile.jpeg"
+    [alt]="'HOME_PAGE.PROFILE_IMAGE_ALT' | translate"
+    width="200"
+    height="200"
+  />
+  <div class="social-icons">
+    <a href="https://github.com/Thi08" target="_blank" aria-label="GitHub">
+      <nz-icon nzType="github" nzTheme="outline"></nz-icon>
+    </a>
+    <a
+      href="https://www.linkedin.com/in/thiagoalbino/"
+      target="_blank"
+      aria-label="LinkedIn"
+    >
+      <nz-icon nzType="linkedin" nzTheme="outline"></nz-icon>
+    </a>
+    <a href="https://wa.me/5535988869227" target="_blank" aria-label="WhatsApp">
+      <nz-icon nzType="whats-app" nzTheme="outline"></nz-icon>
+    </a>
+  </div>
+</div>

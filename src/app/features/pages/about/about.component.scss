@@ -1,0 +1,59 @@
+.cards-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  gap: 2rem;
+}
+.cards-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: black;
+  z-index: -1;
+}
+
+app-card {
+  width: 60%;
+}
+
+app-card:nth-child(even) {
+  align-self: flex-end;
+}
+
+app-card:nth-child(odd) {
+  align-self: flex-start;
+}
+
+.header {
+  font-size: 2rem;
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  text-align: center;
+}
+
+p,
+h3 {
+  color: var(--text);
+}
+
+h3 {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+:host-context(.dark-theme) {
+  p,
+  h3 {
+    color: var(--dark-text);
+  }
+
+  .cards-container::before {
+    background-color: white;
+  }
+}

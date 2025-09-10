@@ -1,0 +1,14 @@
+<h2 header class="header">{{ "PROJECTS.HEADER" | translate }}</h2>
+<div class="cards-container">
+  <app-card>
+    <img src="" [alt]="'PROJECTS.IMAGE_ALT_PLACEHOLDER' | translate" />
+    <h3>{{ "PROJECTS.PROJECT_TITLE_PLACEHOLDER" | translate }}</h3>
+    <p>{{ "PROJECTS.PROJECT_DESCRIPTION_PLACEHOLDER" | translate }}</p>
+    <div class="buttons-area">
+      <app-button>{{ "PROJECTS.VIEW_PROJECT_BUTTON" | translate }}</app-button>
+      <app-button [type]="'transparent'">{{
+        "PROJECTS.GITHUB_BUTTON" | translate
+      }}</app-button>
+    </div>
+  </app-card>
+</div>

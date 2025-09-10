@@ -1,0 +1,90 @@
+<div class="contact-area">
+  <h2>{{ "CONTACT.HEADER" | translate }}</h2>
+  <div class="email">
+    <h3>{{ "CONTACT.EMAIL_TITLE" | translate }}</h3>
+    <a href="mailto:thiagoalbino2000&#64;hotmail.com"
+      >thiagoalbino2000&#64;hotmail.com</a
+    >
+  </div>
+  <div class="social-media">
+    <h3>{{ "CONTACT.SOCIAL_MEDIA_TITLE" | translate }}</h3>
+    <div class="links">
+      <a
+        href="https://www.linkedin.com/in/thiagoalbino/"
+        target="_blank"
+        aria-label="LinkedIn"
+      >
+        <nz-icon nzType="linkedin" nzTheme="outline"></nz-icon>
+      </a>
+      <a
+        href="https://wa.me/5535988869227"
+        target="_blank"
+        aria-label="WhatsApp"
+      >
+        <nz-icon nzType="whats-app" nzTheme="outline" />
+      </a>
+    </div>
+  </div>
+</div>
+
+<form [formGroup]="contactForm" nz-form (ngSubmit)="onSubmit()">
+  <h2>{{ "CONTACT.FORM_HEADER" | translate }}</h2>
+  <nz-form-item>
+    <nz-form-label [nzSm]="6" nzRequired nzFor="name">{{
+      "CONTACT.FORM_NAME_LABEL" | translate
+    }}</nz-form-label>
+    <nz-form-control
+      [nzSm]="14"
+      [nzErrorTip]="'CONTACT.FORM_NAME_ERROR' | translate"
+    >
+      <input nz-input formControlName="name" id="name" />
+    </nz-form-control>
+  </nz-form-item>
+
+  <nz-form-item>
+    <nz-form-label [nzSm]="6" nzRequired nzFor="email">{{
+      "CONTACT.FORM_EMAIL_LABEL" | translate
+    }}</nz-form-label>
+    <nz-form-control
+      [nzSm]="14"
+      [nzErrorTip]="'CONTACT.FORM_EMAIL_ERROR' | translate"
+    >
+      <input nz-input formControlName="email" id="email" />
+    </nz-form-control>
+  </nz-form-item>
+
+  <nz-form-item>
+    <nz-form-label [nzSm]="6" nzRequired nzFor="message">
+      {{ "CONTACT.FORM_MESSAGE_LABEL" | translate }}
+    </nz-form-label>
+    <nz-form-control
+      [nzSm]="14"
+      [nzErrorTip]="'CONTACT.FORM_MESSAGE_ERROR' | translate"
+    >
+      <textarea
+        nz-input
+        formControlName="message"
+        id="message"
+        [nzAutosize]="{ minRows: 3, maxRows: 6 }"
+      ></textarea>
+    </nz-form-control>
+  </nz-form-item>
+
+  <nz-form-item nz-row class="submit-row">
+    <nz-form-control [nzSpan]="14" [nzOffset]="6">
+      <button nz-button nzType="primary" [disabled]="!contactForm.valid">
+        {{ "CONTACT.FORM_SUBMIT_BUTTON" | translate }}
+      </button>
+    </nz-form-control>
+  </nz-form-item>
+
+  <nz-form-item>
+    <nz-form-control [nzSpan]="14" [nzOffset]="6">
+      @if(successMessage()){
+      <p class="message success">{{ successMessage() }}</p>
+      } @if(errorMessage()){
+      <p class="message error">{{ errorMessage() }}</p>
+      }
+    </nz-form-control>
+  </nz-form-item>
+</form>
