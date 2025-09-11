@@ -18,9 +18,9 @@ export class ProfileComponent {
     let filePath: string;
 
     if (currentLang === 'pt') {
-      filePath = '/curriculums/cv-thiago-albino-pt.pdf';
+      filePath = 'curriculums/cv-thiago-albino-pt.pdf';
     } else {
-      filePath = '/curriculums/cv-thiago-albino-en.pdf';
+      filePath = 'curriculums/cv-thiago-albino-en.pdf';
     }
 
     const link = document.createElement('a');

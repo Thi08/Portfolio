@@ -24,18 +24,26 @@ app-card {
   gap: 2rem;
 }
 
-h2{
+h2 {
   text-align: center;
 }
 
 h2,
-h3 {
+h3,
+p {
   color: var(--text);
+}
+
+p {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-top: 5rem;
 }
 
 :host-context(.dark-theme) {
   h2,
-  h3 {
+  h3,
+  p {
     color: var(--dark-text);
   }
 }
