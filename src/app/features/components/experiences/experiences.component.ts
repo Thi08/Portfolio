@@ -11,7 +11,7 @@ import { TranslateModule } from '@ngx-translate/core';
 export class ExperiencesComponent {
   experiencesKeys = signal([
     {
-      img: '/icons/vonbraunlabs.jpeg',
+      img: 'icons/vonbraunlabs.jpeg',
       companyKey: 'EXPERIENCES.COMPANY_VON_BRAUN_1',
       positionKey: 'EXPERIENCES.POSITION_TRAINEE',
       durationKey: 'EXPERIENCES.DURATION_VON_BRAUN_1',
@@ -23,7 +23,7 @@ export class ExperiencesComponent {
       ],
     },
     {
-      img: '/icons/vonbraunlabs.jpeg',
+      img: 'icons/vonbraunlabs.jpeg',
       companyKey: 'EXPERIENCES.COMPANY_VON_BRAUN_2',
       positionKey: 'EXPERIENCES.POSITION_INTERN',
       durationKey: 'EXPERIENCES.DURATION_VON_BRAUN_2',
@@ -35,7 +35,7 @@ export class ExperiencesComponent {
       ],
     },
     {
-      img: '/icons/petufscar.jpeg',
+      img: 'icons/petufscar.jpeg',
       companyKey: 'EXPERIENCES.COMPANY_PET_UFSCAR',
       positionKey: 'EXPERIENCES.POSITION_FULLSTACK',
       durationKey: 'EXPERIENCES.DURATION_PET_UFSCAR',

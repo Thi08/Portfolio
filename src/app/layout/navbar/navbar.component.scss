@@ -88,7 +88,7 @@
     width: 100%;
     flex-direction: column;
     text-align: center;
-    background-color: var(--dark-background);
+    background-color: var(--light-background);
     border-top: 1px solid var(--light-background);
     border-radius: 0 0 1rem 1rem;
     padding-bottom: 1rem;
@@ -101,7 +101,7 @@
   .mobile-links a {
     padding: 0.75rem 0;
     text-decoration: none;
-    color: var(--dark-text);
+    color: var(--text);
     font-weight: 500;
     transition: background-color 0.3s ease;
   }
@@ -124,7 +124,15 @@
     color: var(--dark-text);
   }
 
-  .feather{
+  .feather {
     color: white;
+  }
+
+  .mobile-links {
+    background-color: var(--dark-background);
+
+    a {
+      color: var(--dark-text);
+    }
   }
 }
